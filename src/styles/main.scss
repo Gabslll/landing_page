@@ -1,0 +1,69 @@
+@use 'hero';
+@use 'variaveis';
+@use 'header';
+
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: Potencial Neon, sans-serif;
+}
+
+@font-face {
+    font-family: Potencial Neon;
+    src: url(../../assets/fonts/Polentical-Neon-Regular.ttf);
+    font-weight: 400;
+}
+
+@font-face {
+    font-family: Potencial Neon;
+    src: url(../../assets/fonts/Polentical-Neon-Bold.ttf);
+    font-weight: 700;
+}
+
+body {
+    background-color: variaveis.$corDeFundo;
+    letter-spacing: .5px;
+}
+
+@mixin text($fontSize: 30px) {
+
+}
+
+@mixin title($fontSize: 24px) {
+    @include text($fontSize);
+    color: variaveis.$corTextoPrimario;
+}
+
+.title--big {
+    @include title(15px);
+}
+
+.title {
+    @include title(24px);
+}
+
+.title--small {
+    @include title(10px);
+}
+
+.button {
+    height: 60px;
+    margin-bottom: 15px;
+    padding: 10px;
+    background-color: variaveis.$corDeFundo;
+    color: variaveis.$corTextoPrimario;
+    text-transform: uppercase;
+    border: none;
+    border-radius: 10px;
+    text-decoration: none;
+    padding: 8px 15px;
+    letter-spacing: 1px;
+    border: 1px solid variaveis.$corBorda;
+
+    &:hover {
+        background-color: variaveis.$corTextoPrimario;
+        color: variaveis.$corDeFundo;
+    }
+}

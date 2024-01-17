@@ -1,0 +1,26 @@
+@use 'variaveis';
+
+.hero {
+    padding: 5.6vw;
+    min-height: 80vh;
+    background-image: url(../images/hero_img.png);
+    text-align: center;
+    background-size: cover;
+
+    @media (max-width: 768px) {
+        background-image: url(../images/hero_img.png);
+        padding: calc(50vw + 25px);
+        background-size: contain;
+        background-repeat: no-repeat;
+        margin-top: -55px;
+        text-align: center;
+    }
+
+    &__history {
+        font-weight: 400;
+        padding: 0 300px;
+        line-height: 1.5;
+        margin-bottom: 30em;
+    }
+
+}
